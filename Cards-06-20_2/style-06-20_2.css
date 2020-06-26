@@ -1,4 +1,73 @@
-h1{
-    font-size: 50px;
-    color: red;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    
+    background: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2{
+    font-size: 45px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+h2 span{
+    font-size: 30px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+}
+.container > div {
+    cursor: pointer;
+    height: 200px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+.container > div:hover{
+    opacity: 0.7;
+    transform: scale(1.01);
+}
+.container > div:nth-of-type(1) {
+    grid-column: 1/3;
+}
+.container > div:nth-of-type(6) {
+    grid-column: 3/5;
+}
+.container > div:nth-of-type(9) {
+    grid-column: 3/5;
+}
+.container > div:nth-of-type(10) {
+    grid-column: 1/3;
+}
+
+
+.bg1{
+    background: url(img/NY.webp);
+}
+.bg2{
+    background: url(img/JP.webp);
 }
